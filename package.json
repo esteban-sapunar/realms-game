@@ -1,0 +1,16 @@
+{
+  "name": "realms-game",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Boris Gonzalez <boris.gonzalez.macias@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@rails/webpacker": "4.3.0",
+    "vue": "^3.2.45",
+    "vue-loader": "^17.0.1",
+    "vue-template-compiler": "^2.7.14"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^4.11.1"
+  }
+}

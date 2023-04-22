@@ -1,0 +1,2 @@
+class UrbanNeighbourhood < Building
+end
