@@ -1,3 +1,26 @@
-<h1>Home!!</h1>
+<% if current_user %>
+  <h2>Player Information</h2>
+  <p><b>Lord's Name</b></p>
+  <p><%= current_user.name %> <%= current_user.family_name %></p>
+  <p><b>Title</b></p>
+  <% 
+    manor = Manor.where(world_id: current_user.world_id, user_id: current_user.id).last
+    shire = manor.shire
+    county = shire.county
+    duchy = county.duchy
+    kingdom = duchy.kingdom   
+  %>
+  <p><%= "Lord of the #{manor.name} of the #{shire.name} of the #{county.name} of the #{duchy.name} of the #{kingdom.name}" %></p>
+  <p><b>Hundreds</b></p>
+  <% 
+    hundreds = manor.hundreds
+    hundreds.each do |h|
+  %>
+  <p><%= "Position: #{h.position} , Type: #{h.hundred_type}" %></p>
+  <% end %>
+
+<% else %>
+  <p>I'm not signed in</p>
+<% end %>
 <div id='app'>
 </div>

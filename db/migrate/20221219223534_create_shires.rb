@@ -3,6 +3,7 @@ class CreateShires < ActiveRecord::Migration[7.0]
     create_table :shires do |t|
       t.string :name
       t.belongs_to :county, null: false, foreign_key: true
+      t.belongs_to :world, null: false, foreign_key: true
 
       t.timestamps
     end
