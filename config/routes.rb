@@ -11,5 +11,5 @@ Rails.application.routes.draw do
     },
     :controllers => { registrations: 'users/registrations' }
 
-  root to: 'pages#home'
+  root to: 'pages#user_home'
 end

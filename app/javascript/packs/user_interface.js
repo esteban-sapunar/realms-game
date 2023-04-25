@@ -33,11 +33,11 @@
 
 
 import { createApp } from 'vue'
-import App from '../app.vue'
+import HundredsGrid from '../user_interface/hundreds_grid.vue'
 
 document.addEventListener('DOMContentLoaded', () => {
-  const app = createApp(App)
-  app.mount('#app')
+  const hGrids = createApp(HundredsGrid)
+  hGrids.mount('#hundreds-grid')
 })
 
 
